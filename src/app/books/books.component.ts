@@ -7,8 +7,9 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';//<==added 
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-  useBtn = false
-  createBook: FormGroup
+  useBtn = false;
+  createBook: FormGroup;
+  books = [];
 
   constructor(private fb: FormBuilder) {
     setTimeout(() => {
@@ -26,6 +27,6 @@ export class BooksComponent implements OnInit {
     })
   }
   onCreateBook() {
-
+    this.books.push(this.createBook.value)
   }
 }

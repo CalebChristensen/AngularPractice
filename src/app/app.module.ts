@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { BooksComponent } from './books/books.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,9 @@ import { BooksComponent } from './books/books.component';
     BooksComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] //Everything will funnel into AppComponent because of this bootstrap. BOOTSTRAP IS NOT THE CSS STYLING.
